@@ -1,0 +1,29 @@
+import { model, Schema } from 'mongoose';
+import { IClass } from './interfaces/class';
+
+const ClassSchema = new Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  schoolYear: {
+    type: String,
+    required: true,
+  },
+  code: {
+    type: String,
+    required: true,
+  },
+  teachers: {
+    type: [Schema.Types.ObjectId],
+    ref: 'teacher',
+    required: true,
+  },
+  students: {
+    type: [Schema.Types.ObjectId],
+    ref: 'student',
+    required: true,
+  },
+});
+
+export default model<IClass>('class', ClassSchema);
