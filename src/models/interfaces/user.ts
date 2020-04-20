@@ -1,4 +1,6 @@
 import { Document } from 'mongoose';
+import { ISchool } from './school';
+import { IGroup } from './group';
 
 export interface IUser extends Document {
   __t: string;
@@ -9,4 +11,6 @@ export interface IUser extends Document {
   password: string;
   avatar: string;
   birthday: Date;
+  school: ISchool['_id'];
+  groups: IGroup['_id'][];
 }

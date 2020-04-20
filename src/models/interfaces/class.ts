@@ -1,11 +1,9 @@
 import { Document } from 'mongoose';
-import { IStudent } from './student';
-import { ITeacher } from './teacher';
+import { IGroup } from './group';
 
 export interface IClass extends Document {
   name: string;
   schoolYear: string;
   code: string;
-  teachers: ITeacher['_id'][];
-  students: IStudent['_id'][];
+  group: IGroup['_id'];
 }
