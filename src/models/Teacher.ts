@@ -7,7 +7,9 @@ export const Teacher = User.discriminator<ITeacher>(
   new Schema({
     classes: {
       type: [Schema.Types.ObjectId],
-      required: false,
+      ref: 'class',
+      default: [],
+      required: true,
     },
   })
 );
