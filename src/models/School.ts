@@ -17,17 +17,13 @@ const SchoolSchema = new Schema({
     required: true,
     unique: true,
   },
-  teachers: {
-    type: [Schema.Types.ObjectId],
-    ref: 'teacher',
+  group: {
+    type: Schema.Types.ObjectId,
+    ref: 'group',
   },
-  students: {
+  groups: {
     type: [Schema.Types.ObjectId],
-    ref: 'student',
-  },
-  classes: {
-    type: [Schema.Types.ObjectId],
-    ref: 'class',
+    ref: 'group',
   },
 });
 

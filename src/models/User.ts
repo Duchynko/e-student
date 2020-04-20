@@ -35,6 +35,12 @@ const UserSchema = new Schema({
     ref: 'school',
     required: true,
   },
+  groups: {
+    type: [Schema.Types.ObjectId],
+    ref: 'group',
+    default: [],
+    required: true,
+  },
 });
 
 export default model<IUser>('user', UserSchema);

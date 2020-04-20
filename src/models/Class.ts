@@ -14,14 +14,9 @@ const ClassSchema = new Schema({
     type: String,
     required: true,
   },
-  teachers: {
-    type: [Schema.Types.ObjectId],
-    ref: 'teacher',
-    required: true,
-  },
-  students: {
-    type: [Schema.Types.ObjectId],
-    ref: 'student',
+  group: {
+    type: Schema.Types.ObjectId,
+    ref: 'group',
     required: true,
   },
 });
